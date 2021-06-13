@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Producto } from '../../models/producto.models'
 
 @Component({
   selector: 'app-formulario',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  @Output() productoCreado: EventEmitter<Producto>;
+
+  nuevoProducto: Producto;
+
+  constructor() { 
+    this.nuevoProducto = new Producto();
+    this.productoCreado = new EventEmitter();
+  }
 
   ngOnInit(): void {
+  }
+
+  onClick() {
+    this.productoCreado.emit(this.nuevoProducto);
   }
 
 }

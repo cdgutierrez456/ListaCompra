@@ -2,12 +2,12 @@ export class Producto {
     
     nombre: string;
     cantidad: number;
-    departamento: string;
+    categoria: string;
 
-    constructor(pNombre: string, pCantidad: number, pDepartamento: string) {
+    constructor(pNombre: string = '', pCantidad: number = 0, pCategoria: string = '') {
         this.nombre = pNombre;
         this.cantidad = pCantidad;
-        this.departamento = pDepartamento;
+        this.categoria = pCategoria;
     }
 
 }
