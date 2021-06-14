@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto } from './models/producto.models';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  productosSeleccionados: Producto[];
+
+  constructor() {
+    this.productosSeleccionados = [];
+  }
+
   onProductoCreado($event) {
-    console.log($event);
+    this.productosSeleccionados.push($event);
   }
 
 }

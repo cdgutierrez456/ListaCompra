@@ -1,1 +1,9 @@
-<p>lista-productos works!</p>
+<div class="productos">
+    <div class="producto" *ngFor='let producto of productos'>
+        <p>{{ producto.nombre.toUpperCase() }}</p>
+        <div>
+            <p>Cantidad: {{ producto.cantidad }}</p>
+            <p>{{ producto.categoria }}</p>
+        </div>
+    </div>
+</div>
