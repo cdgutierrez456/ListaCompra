@@ -9,6 +9,7 @@ import { Producto } from '../../models/producto.models';
 export class ListaProductosComponent implements OnInit {
 
   @Input() productos: Producto[];
+  @Input() textoBoton: string;
 
   @Output() productoSeleccionado: EventEmitter<number>;
 
