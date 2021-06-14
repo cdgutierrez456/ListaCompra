@@ -22,6 +22,7 @@ export class FormularioComponent implements OnInit {
 
   onClick() {
     this.productoCreado.emit(this.nuevoProducto);
+    this.nuevoProducto = new Producto();
   }
 
 }
