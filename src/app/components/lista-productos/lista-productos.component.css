@@ -11,6 +11,8 @@
     padding: 10px;
     width: 300px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .producto div p:first-child {
@@ -20,6 +22,9 @@
 .producto div p:last-child {
     float: right;
 }
+
+
+
 
 
 
